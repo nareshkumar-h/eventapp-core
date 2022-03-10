@@ -1,6 +1,6 @@
 package com.kvcet.eventapp.dao;
 
-import java.sql.SQLException;
+import java.util.List;
 
 import com.kvcet.eventapp.exception.DBException;
 import com.kvcet.eventapp.model.User;
@@ -8,4 +8,6 @@ import com.kvcet.eventapp.model.User;
 public interface UserDAO {
 
 	void register(User user) throws DBException;
+	
+	List<User> findAll() throws DBException;
 }
